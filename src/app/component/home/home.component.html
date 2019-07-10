@@ -1,0 +1,16 @@
+<div>
+  <div>
+    <input type="datetime-local"  id="dateAsString" value="dateAsString" [(ngModel)]="dateAsString">
+    <button type="submit" class="btn btn-primary" (click)="getWeatherData()">Get data</button>
+  </div>
+  <ng-container *ngIf="isWeatherData()">
+      weather: {{weatherData.weather}}<br>
+      temp: {{weatherData.temp}}<br>
+      pressure: {{weatherData.pressure}}<br>
+      humidity: {{weatherData.humidity}}<br>
+      tempMax: {{weatherData.tempMax}}<br>
+      tempMin: {{weatherData.tempMin}}<br>
+      windSpeed: {{weatherData.windSpeed}}<br>
+      measure time: {{weatherData.dateTime}}
+  </ng-container>
+</div>
